@@ -501,7 +501,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 90%;
   margin-top: auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -675,6 +675,42 @@ a {
   display: block;
   width: 100%;
   margin-bottom: 40px;
+}
+
+.servicos-linha1 {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.servicos-linha2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicos-por-categoria {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.servicos-ancora {
+  font-family: 'Changa One', Impact, sans-serif;
+  font-size: 2.2em;
+  line-height: 1em;
+}
+
+.grupo-servicos-ancora {
+  display: flex;
+  padding-top: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.servicos-individuais{
+  font-family: Inconsolata, monospace;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  filter: invert(100%);
 }
 
 .heading-3 {

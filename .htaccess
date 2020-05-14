@@ -1,0 +1,14 @@
+
+RewriteEngine on
+
+ErrorDocument 404 /404.html
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^diadoarauto\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.diadoarauto\.com\.br$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/diadoarauto\.com\.br\/" [R=301,L]
+
