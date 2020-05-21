@@ -16,6 +16,11 @@
   padding-left: 20px;
 }
 
+div#primeira{
+  margin-top: 12rem;
+  margin-bottom: -12rem;
+}
+
 .w-checkbox::before {
   content: ' ';
   display: table;
@@ -540,7 +545,7 @@ a {
 }
 
 .divisor-animado {
-  margin-top: -80px;
+  margin-top: -350px;
   padding-top: 0px;
 }
 

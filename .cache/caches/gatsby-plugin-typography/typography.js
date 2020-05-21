@@ -1,0 +1,1 @@
+module.exports = require("/home/meulindux/Documents/DDA-3.0/src/utils/typography")
