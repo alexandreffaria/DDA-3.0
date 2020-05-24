@@ -3152,6 +3152,10 @@ a {
 }
 
 @media screen and (max-width: 991px) {
+  div#primeira {
+    margin-top: 20rem;
+    margin-bottom: -30rem;
+  }
   #w-node-173b315c79a4-9c51f671 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;
@@ -3565,6 +3569,10 @@ a {
 }
 
 @media screen and (max-width: 479px) {
+  div#primeira {
+    margin-top: 65rem;
+    margin-bottom: -40rem;
+  }
   #w-node-0f828a69c37f-9c51f671 {
     -ms-grid-row: span 2;
     grid-row-start: span 2;
