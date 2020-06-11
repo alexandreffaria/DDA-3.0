@@ -20,6 +20,11 @@ div#segunda{
   margin-bottom: 0px;
 }
 
+div#menucab{
+  width: 100%;
+  
+  text-align: right;
+}
 
 .w-checkbox {
   display: block;
@@ -2780,6 +2785,13 @@ a {
 }
 
 @media (max-width: 479px) {
+  #menucab{
+    display: flex;
+    margin-top: -120px;
+    flex-direction: column;
+    
+  }
+
   div#primeira{
     margin-top: 1050px;
     margin-bottom: -650px;
