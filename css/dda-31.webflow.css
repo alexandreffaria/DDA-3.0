@@ -10,6 +10,17 @@
   grid-column-gap: 16px;
 }
 
+div#primeira{
+  margin-top: 200px;
+  margin-bottom: -150px;
+}
+
+div#segunda{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
 .w-checkbox {
   display: block;
   margin-bottom: 5px;
@@ -2515,6 +2526,15 @@ a {
 }
 
 @media (max-width: 991px) {
+  div#primeira{
+    margin-top: 350px;
+    margin-bottom: -300px;
+  }
+  
+  div#segunda{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .menu-wrapper {
     padding-top: 0px;
     -webkit-box-orient: vertical;
@@ -2623,6 +2643,16 @@ a {
 }
 
 @media (max-width: 767px) {
+    div#primeira{
+      margin-top: 350px;
+      margin-bottom: -500px;
+    }
+    
+    div#segunda{
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  
   .container-22 {
     margin-top: 36px;
     padding-top: 0px;
@@ -2745,6 +2775,16 @@ a {
 }
 
 @media (max-width: 479px) {
+  div#primeira{
+    margin-top: 1050px;
+    margin-bottom: -650px;
+  }
+  
+  div#segunda{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
   .banner-home {
     height: 140vh;
     margin-bottom: -350px;
