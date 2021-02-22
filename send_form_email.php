@@ -25,7 +25,7 @@
   $headers .= "Reply-To: $visitor_email \r\n";
 
   function reCaptcha($recaptcha){
-    $secret = "6LepXWIaAAAAANZbdaUHSVX1Gz4IaqYoBp18-VBz";
+    $secret = "6Lc4aWIaAAAAAK0DiFGI1u9GmdAkXJOOLyJBITRK";
     $ip = $_SERVER['REMOTE_ADDR'];
   
     $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
@@ -43,7 +43,7 @@
 
   $recaptcha = $_POST['g-recaptcha-response'];
   $res = reCaptcha($recaptcha);
-
+  $captchaWork = $res['success'];
   $email_body = "Nome: $nome.\n".
   "Email: $visitor_email.\n".
   "Empresa: $empresa.\n".
@@ -54,14 +54,14 @@
   "Política de Privacidade: $pdp.\n".
   "Autorização de email: $newsletter.\n".
   "Mensagem: $message.\n".
-  "Captcha Status:  $res\n";
+  "Captcha Status: $captchaWork \n";
 
   if($res['success']){
     mail($to,$email_subject,$email_body,$headers);
-    header("Location: email-recebido.html")
+    header("Location: email-recebido.html");
   }
   else{
-    header("Location: index.html")
+    header("Location: index.html");
   }
 
   

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Mon Dec 02 2019 15:19:59 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="5de5249947979468d1956ddf" data-wf-site="5de1f89f5f17628f022ed8b0">
+<html data-wf-page="5de1f89f5f17620fce2ed8b6" data-wf-site="5de1f89f5f17628f022ed8b0">
 <head>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -10,17 +11,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-M2FTWQZ');</script>
   <!-- End Google Tag Manager -->
-  <meta charset="utf-8">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103961579-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-103961579-1');
-</script>
-  <title>Contato | Email Recebido | Dia do Arauto</title>
+  <meta charset="utf-8">
+  <title>Contato | Dia do Arauto</title>
   <meta content="Contato | Dia do Arauto" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -46,7 +39,6 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
-
 
 </head>
 <body class="body-5">
@@ -96,13 +88,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="w-col w-col-6">
           <div class="form-block-2 w-form">
-            <form id="email-form" name="email-form" data-name="Email Form" class="form-aba-contato"><label for="name" class="field-label-peq02">Seu nome</label><input type="text" class="nome w-input" maxlength="256" name="name" data-name="Name" id="name"><label for="name-5" class="field-label-peq02">Nome da Empresa</label><input type="text" class="nome w-input" maxlength="256" name="name-4" data-name="Name 4" id="name-4"><label for="name-5" class="field-label-peq02">Cargo</label><select id="Cargo" name="Cargo" data-name="Cargo" class="select-field nome w-select"><option value="Dono">Proprietário</option><option value="2nivel">Diretor ou gerente de marketing</option><option value="Sozinho">Autônomo</option><option value="Arte">Artista</option><option value="Third">Outros</option></select><label for="forma-de-contato" class="field-label-peq02">Forma de contato preferencial</label><select id="forma-de-contato" name="forma-de-contato" data-name="forma-de-contato" class="select-field nome w-select"><option value="Email">Email</option><option value="Video">Vídeo chamada</option><option value="Ligação">Ligação</option></select><label for="name-5" class="field-label-peq02">Telefone para contato</label><input type="text" class="nome w-input" maxlength="256" name="name-3" data-name="Name 3" id="name-3"><label class="field-label-5">Se preferir ligação por vídeo, faremos por WhatsApp ou HangOuts<br></label><label for="email" class="field-label-4">E-mail para contato direto</label><input type="email" class="w-input" maxlength="256" name="email" data-name="Email" id="email" required=""><textarea placeholder="Qual problema está atrapalhando seu projeto? (Opcional)" maxlength="5000" id="Problema" data-name="Problema" name="Problema" class="textarea w-input"></textarea>
-              <div><label class="w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"><span class="checkbox-label w-form-label">Autorizo o envio de materiais &quot;extras&quot; que sejam considerados interessantes para o meu negócio pelo próximo semestre</span></label><label class="w-checkbox"><input type="checkbox" id="Politica de privacidade" name="Politica-de-privacidade" data-name="Politica de privacidade" required="" class="w-checkbox-input"><span for="Politica de privacidade" class="checkbox-label-2 w-form-label">Li e estou de acordo com a politica de privacidade dos dados inseridos aqui <strong>*</strong></span></label><label class="w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" required="" checked="" class="w-checkbox-input"><span class="checkbox-label w-form-label">Autorizo o envio do e-mail de contato </span></label></div><input type="submit" value="Enviar" data-wait="Só um segundo..." class="submit-button w-button"></form>
+            <form id="email-form" name="email-form" data-name="Email Form" class="form-aba-contato" method="post" action="send_form_email.php">
+              <label for="name" class="field-label-peq02">Seu nome</label>
+              <input type="text" class="nome w-input" maxlength="256" name="nome" data-name="Name">
+              <label for="name-5" class="field-label-peq02">Nome da Empresa</label>
+              <input type="text" class="nome w-input" maxlength="256" name="empresa" data-name="empresa">
+              <label for="name-5" class="field-label-peq02">Cargo</label>
+              <select id="Cargo" name="cargo" data-name="cargo" class="select-field nome w-select">
+                <option value="Dono">Proprietário</option>
+                <option value="Diretor">Diretor ou gerente de marketing</option>
+                <option value="Autonomo">Autônomo</option>
+                <option value="Artista">Artista</option>
+                <option value="Outros">Outros</option>
+              </select>
+              <label for="forma-de-contato" class="field-label-peq02">Forma de contato preferencial</label>
+              <select id="forma-de-contato" name="contatopref" data-name="contatopref" class="select-field nome w-select">
+                <option value="Email">Email</option>
+                <option value="Video">Vídeo chamada</option>
+                <option value="Ligação">Ligação</option>
+              </select>
+              <label for="name-5" class="field-label-peq02">Telefone para contato</label>
+              <input type="text" class="nome w-input" maxlength="256" name="telefone" data-name="telefone">
+              <label class="field-label-5">Se preferir ligação por vídeo, faremos por WhatsApp ou HangOuts</label>
+              <label for="email" class="field-label-4">E-mail para contato direto</label>
+              <input type="email" class="w-input" maxlength="256" name="email" data-name="email" required="">
+              <textarea placeholder="Qual problema está atrapalhando seu projeto? (Opcional)" maxlength="5000" data-name="mensagem" name="mensagem" class="textarea w-input"></textarea>
+              <div>
+                <label class="w-checkbox">
+                  <input type="checkbox" name="materiais" data-name="materiais" class="w-checkbox-input">
+                  <span class="checkbox-label w-form-label">Autorizo o envio de materiais &quot;extras&quot; que sejam considerados interessantes para o meu negócio pelo próximo semestre</span>
+                </label>
+                <label class="w-checkbox">
+                  <input type="checkbox" name="pdp" data-name="pdp" required="" class="w-checkbox-input">
+                  <span for="Politica de privacidade" class="checkbox-label-2 w-form-label">Li e estou de acordo com a politica de privacidade dos dados inseridos aqui <strong>*</strong></span>
+                </label>
+                <label class="w-checkbox">
+                  <input type="checkbox"  name="autorizo-email" data-name="autorizo-email" required="" checked="" class="w-checkbox-input">
+                  <span class="checkbox-label w-form-label">Autorizo o envio do e-mail de contato </span>
+                </label>
+              </div>
+              <div id="captcha"></div>
+              <input type="submit" value="Enviar" data-wait="Só um segundo..." class="submit-button w-button">
+            </form>
             <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
+              <div>Muito Obrigado! Seu email foi enviado com sucesso!</div>
             </div>
             <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
+              <div>Oops! Algo deu errado, tente de novo por favor.</div>
             </div>
           </div>
           <div class="text-block-6"><strong>Email Recebido!</strong></div>
@@ -116,10 +148,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="index.html" class="w-inline-block">
           <div class="nav-link">Home</div>
         </a>
-        <a href="servicos.html" class="w-inline-block ">
+        <a href="servicos.html" class="w-inline-block">
           <div class="nav-link">Serviços</div>
         </a>
-        <a href="nosso-modelo.html" class="w-inline-block ">
+        <a href="metodologia.html" class="w-inline-block ">
           <div class="nav-link">Metodologia</div>
         </a>
         <a href="portfolio.html" class="w-inline-block">
@@ -137,6 +169,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('captcha', {
+        'sitekey' : '6Lc4aWIaAAAAADJ288zsw_Ob_8fHfOfblvOqIoPZ',
+        'callback' : verifyCallback,
+        'theme' : 'dark'
+      });
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+  </script>
+  
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
+
 </html>

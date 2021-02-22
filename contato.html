@@ -39,6 +39,14 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('captcha', {
+        'sitekey' : '6Lc4aWIaAAAAADJ288zsw_Ob_8fHfOfblvOqIoPZ',
+        'theme' : 'dark'
+      });
+    };
+  </script>
 
 </head>
 <body class="body-5">
@@ -127,7 +135,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="checkbox-label w-form-label">Autorizo o envio do e-mail de contato </span>
                 </label>
               </div>
-              <input type="submit" value="Enviar" data-wait="Só um segundo..." class="submit-button w-button"></form>
+              <div id="captcha"></div>
+              <input type="submit" value="Enviar" data-wait="Só um segundo..." class="submit-button w-button">
+            </form>
             <div class="w-form-done">
               <div>Muito Obrigado! Seu email foi enviado com sucesso!</div>
             </div>
@@ -166,6 +176,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+  </script>
+  
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 
