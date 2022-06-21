@@ -1,18 +1,20 @@
-// import logo from './logo.svg';
+import { Link, Outlet } from "react-router-dom"
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './components/Main';
+import Home from './routes/home';
 
-function App() {
+
+export default function App() {
   return (
     <div>
-      <Header />
-      <Main />
-      <Footer />
+      <Link to="/">Home</Link>
+      <Link to="/servicos">Serviços</Link>
+      <Link to="/metodologia">Metodologia</Link>
+      <Link to="/portfolio">Portfolio</Link>
+      <Link to="/contato">Contato</Link>
+      <Outlet />
+      
     </div>
-   
+    
   );
 }
 
-export default App;
