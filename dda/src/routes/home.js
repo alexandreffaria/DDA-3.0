@@ -6,11 +6,15 @@ export default function Home(){
             <h1>
                 Especialistas em você
             </h1>
+            
 
            <section>
                 <h2>
                     Nossa História
                 </h2>
+                <h4>
+                    Criando e inovando ao seu lado desde 2017
+                </h4>
                 <p>
                     A Dia do Arauto é uma agência meio diferente. Dá uma olhada na nossa história, que você vai entender.
                 </p>
